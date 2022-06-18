@@ -1,42 +1,106 @@
 <!DOCTYPE html>
+<!--
+Copyright (c) 2016 by Ivan (http://codepen.io/k-ivan/pen/pJMLmJ)
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+-->
+
 <html >
   <head>
     <meta charset="UTF-8">
-    <title>Audio player HTML5</title>
+    <title>Piosenki z Lektorem (RadioZET)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="css/AudioPlayer.css">
     <style>
-
     #player{
-        position: relative;
-        max-width: 700px;
-        height: 500px;
+        max-width: 100%;
+        height: 10%;
         border: solid 1px gray;
     }
     </style>
   </head>
 
   <body>
-      <!-- Audio player container-->
-     <div id='player'></div>
 
-    <!-- Audio player js begin-->
+     <div id='player'> </div>
+
     <script src="js/AudioPlayer.js"></script>
 
     <script>
-        // test image for web notifications
+
         var iconImage = null;
 
         AP.init({
-            container:'#player',//a string containing one CSS selector
+            container:'#player',
             volume   : 0.7,
             autoPlay : true,
             notification: false,
             playList: [
-                {'icon': iconImage, 'title': 'Try Everything', 'file': 'mp3/try-everything.mp3'},
-                {'icon': iconImage, 'title': 'Let It Go', 'file': 'mp3/let-it-go.mp3'}
+            {'icon': iconImage, 'title': 'Ace Of Base ALL THAT SHE WANTS radiozet.pl', 'file': 'mp3/Ace Of Base ALL THAT SHE WANTS.mp3'},
+          {'icon': iconImage, 'title': 'Adele SET FIRE TO THE RAIN radiozet.pl', 'file': 'mp3/Adele SET FIRE TO THE RAIN.mp3'},
+          {'icon': iconImage, 'title': 'Alexia UH LA LA LA radiozet.pl', 'file': 'mp3/Alexia UH LA LA LA.mp3'},
+          {'icon': iconImage, 'title': 'Aqua BARBIE WORLD radiozet.pl', 'file': 'mp3/Aqua BARBIE WORLD.mp3'},
+          {'icon': iconImage, 'title': 'Beatles LET IT BE radiozet.pl', 'file': 'mp3/Beatles LET IT BE.mp3'},
+          {'icon': iconImage, 'title': 'Black Eyed Peas I GOTTA FEELING radiozet.pl', 'file': 'mp3/Black Eyed Peas I GOTTA FEELING.mp3'},
+          {'icon': iconImage, 'title': 'Black Eyed Peas MY HUMPS radiozet.pl', 'file': 'mp3/Black Eyed Peas MY HUMPS.mp3'},
+          {'icon': iconImage, 'title': 'Blue Lagoon BREAK MY STRIDE radiozet.pl', 'file': 'mp3/Blue Lagoon BREAK MY STRIDE.mp3'},
+          {'icon': iconImage, 'title': 'Carly Rae Jepsen CALL ME MAYBE radiozet.pl', 'file': 'mp3/Carly Rae Jepsen CALL ME MAYBE.mp3'},
+          {'icon': iconImage, 'title': 'Celine Dion MY HEART WILL GO ON radiozet.pl', 'file': 'mp3/Celine Dion MY HEART WILL GO ON.mp3'},
+          {'icon': iconImage, 'title': 'Coolio GANGSTAS PARADISE radiozet.pl', 'file': 'mp3/Coolio GANGSTAS PARADISE.mp3'},
+          {'icon': iconImage, 'title': 'Daft Punk GET LUCKY radiozet.pl', 'file': 'mp3/Daft Punk GET LUCKY.mp3'},
+          {'icon': iconImage, 'title': 'Danzel PUMP IT UP radiozet.pl', 'file': 'mp3/Danzel PUMP IT UP.mp3'},
+          {'icon': iconImage, 'title': 'Deorro PERDONAME radiozet.pl', 'file': 'mp3/Deorro PERDONAME.mp3'},
+          {'icon': iconImage, 'title': 'DJ Bobo THERE IS A PARTY radiozet.pl', 'file': 'mp3/DJ Bobo THERE IS A PARTY.mp3'},
+          {'icon': iconImage, 'title': 'Dr. Alban SING HALLELUJAH! radiozet.pl', 'file': 'mp3/Dr. Alban SING HALLELUJAH!.mp3'},
+          {'icon': iconImage, 'title': 'Eiffel 65 BLUE radiozet.pl', 'file': 'mp3/Eiffel 65 BLUE.mp3'},
+          {'icon': iconImage, 'title': 'Ellie Goulding LOVE ME LIKE YOU DO radiozet.pl', 'file': 'mp3/Ellie Goulding LOVE ME LIKE YOU DO.mp3'},
+          {'icon': iconImage, 'title': 'Eric Prydz CALL ON ME radiozet.pl', 'file': 'mp3/Eric Prydz CALL ON ME.mp3'},
+          {'icon': iconImage, 'title': 'Flo Rida WHISTLE radiozet.pl', 'file': 'mp3/Flo Rida WHISTLE.mp3'},
+          {'icon': iconImage, 'title': 'Geri Halliwell ITS RAINING MAN radiozet.pl', 'file': 'mp3/Geri Halliwell ITS RAINING MAN.mp3'},
+          {'icon': iconImage, 'title': 'Haddaway WHAT IS LOVE radiozet.pl', 'file': 'mp3/Haddaway WHAT IS LOVE.mp3'},
+          {'icon': iconImage, 'title': 'Inner Circle SWEAT (A LA LA LA LA LONG) radiozet.pl', 'file': 'mp3/Inner Circle SWEAT (A LA LA LA LA LONG).mp3'},
+          {'icon': iconImage, 'title': 'James Brown SEX MACHINE radiozet.pl', 'file': 'mp3/James Brown SEX MACHINE.mp3'},
+          {'icon': iconImage, 'title': 'John Mamann LOVE LIFE radiozet.pl', 'file': 'mp3/John Mamann LOVE LIFE.mp3'},
+          {'icon': iconImage, 'title': 'Kaoma LAMBADA radiozet.pl', 'file': 'mp3/Kaoma LAMBADA.mp3'},
+          {'icon': iconImage, 'title': 'Katy Perry FIREWORK radiozet.pl', 'file': 'mp3/Katy Perry FIREWORK.mp3'},
+          {'icon': iconImage, 'title': 'Kyle Minogue I SHOULD BE SO LUCKY radiozet.pl', 'file': 'mp3/Kyle Minogue I SHOULD BE SO LUCKY.mp3'},
+          {'icon': iconImage, 'title': 'La Bouche BE MY LOVER radiozet.pl', 'file': 'mp3/La Bouche BE MY LOVER.mp3'},
+          {'icon': iconImage, 'title': 'Lady Gaga POKER FACE radiozet.pl', 'file': 'mp3/Lady Gaga POKER FACE.mp3'},
+          {'icon': iconImage, 'title': 'Londonbeat I VE BEEN THINKING ABOUT YOU radiozet.pl', 'file': 'mp3/Londonbeat I VE BEEN THINKING ABOUT YOU.mp3'},
+          {'icon': iconImage, 'title': 'Los Del Rio MACARENA radiozet.pl', 'file': 'mp3/Los Del Rio MACARENA.mp3'},
+          {'icon': iconImage, 'title': 'MC Hammer U CANT TOUCH THIS radiozet.pl', 'file': 'mp3/MC Hammer U CANT TOUCH THIS.mp3'},
+          {'icon': iconImage, 'title': 'Michael Jackson SMOOTH CRIMINAL radiozet.pl', 'file': 'mp3/Michael Jackson SMOOTH CRIMINAL.mp3'},
+          {'icon': iconImage, 'title': 'Michel Telo AI SE EU TU PEGO radiozet.pl', 'file': 'mp3/Michel Telo AI SE EU TU PEGO.mp3'},
+          {'icon': iconImage, 'title': 'Modern Talking YOURE MY HEART, YOURE MY SOUL radiozet.pl', 'file': 'mp3/Modern Talking YOURE MY HEART, YOURE MY SOUL.mp3'},
+          {'icon': iconImage, 'title': 'Mr. President COCO JAMBO radiozet.pl', 'file': 'mp3/Mr. President COCO JAMBO.mp3'},
+          {'icon': iconImage, 'title': 'Nana LONELY radiozet.pl', 'file': 'mp3/Nana LONELY.mp3'},
+          {'icon': iconImage, 'title': 'Nickelback WHAT ARE YOU WAITING FOR radiozet.pl', 'file': 'mp3/Nickelback WHAT ARE YOU WAITING FOR.mp3'},
+          {'icon': iconImage, 'title': 'No Mercy WHERE DO YOU GO radiozet.pl', 'file': 'mp3/No Mercy WHERE DO YOU GO.mp3'},
+          {'icon': iconImage, 'title': 'Numero Uno TORA TORA TORA radiozet.pl', 'file': 'mp3/Numero Uno TORA TORA TORA.mp3'},
+          {'icon': iconImage, 'title': 'Oceana ENDLESS SUMMER radiozet.pl', 'file': 'mp3/Oceana ENDLESS SUMMER.mp3'},
+          {'icon': iconImage, 'title': 'O-Zone DRAGOSTEA DIN TEI radiozet.pl', 'file': 'mp3/O-Zone DRAGOSTEA DIN TEI.mp3'},
+          {'icon': iconImage, 'title': 'Pitbull I KNOW YOU WANT ME radiozet.pl', 'file': 'mp3/Pitbull I KNOW YOU WANT ME.mp3'},
+          {'icon': iconImage, 'title': 'Prince PURPLE RAIN radiozet.pl', 'file': 'mp3/Prince PURPLE RAIN.mp3'},
+          {'icon': iconImage, 'title': 'Psy GANGNAM STYLE radiozet.pl', 'file': 'mp3/Psy GANGNAM STYLE.mp3'},
+          {'icon': iconImage, 'title': 'Rebecca Black FRIDAY radiozet.pl', 'file': 'mp3/Rebecca Black FRIDAY.mp3'},
+          {'icon': iconImage, 'title': 'Rednex COTTON EYE JOE radiozet.pl', 'file': 'mp3/Rednex COTTON EYE JOE.mp3'},
+          {'icon': iconImage, 'title': 'Rihanna UMBRELLA radiozet.pl', 'file': 'mp3/Rihanna UMBRELLA.mp3'},
+          {'icon': iconImage, 'title': 'Shakira WHENEVER, WHEREVER radiozet.pl', 'file': 'mp3/Shakira WHENEVER, WHEREVER.mp3'},
+          {'icon': iconImage, 'title': 'Sia CHANDELIER radiozet.pl', 'file': 'mp3/Sia CHANDELIER.mp3'},
+          {'icon': iconImage, 'title': 'SNAP POWER radiozet.pl', 'file': 'mp3/SNAP POWER.mp3'},
+          {'icon': iconImage, 'title': 'SNAP RHYTHM IS A DANCER radiozet.pl', 'file': 'mp3/SNAP RHYTHM IS A DANCER.mp3'},
+          {'icon': iconImage, 'title': 'Taylor Swift SHAKE IT OFF radiozet.pl', 'file': 'mp3/Taylor Swift SHAKE IT OFF.mp3'},
+          {'icon': iconImage, 'title': 'Vanessa Pardis JOE LE TAXI radiozet.pl', 'file': 'mp3/Vanessa Pardis JOE LE TAXI.mp3'},
+          {'icon': iconImage, 'title': 'Vanilla Ice ICE ICE BABY radiozet.pl', 'file': 'mp3/Vanilla Ice ICE ICE BABY.mp3'},
+          {'icon': iconImage, 'title': 'Vengaboys BOOM BOOM BOOM BOOM radiozet.pl', 'file': 'mp3/Vengaboys BOOM BOOM BOOM BOOM.mp3'},
+          {'icon': iconImage, 'title': 'Weekend ONA TAŃCZY DLA MNIE radiozet.pl', 'file': 'mp3/Weekend ONA TAŃCZY DLA MNIE.mp3'},
+          {'icon': iconImage, 'title': 'Wham! WAKE ME UP BEFORE YOU GO GO radiozet.pl', 'file': 'mp3/Wham! WAKE ME UP BEFORE YOU GO GO.mp3'},
           ]
         });
     </script>
